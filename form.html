@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <header>Form Sample</header>
+    <div>
+        <form method="post">
+            <div>
+                <label>Message</label>
+                <input title="zEnter the Message" id="msg">
+                <button type="submit" class="btn">Create</button>
+            </div>
+            <div>
+                Base64 encoded text:
+                <label id="msg1"></label>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', event => {
+            event.preventDefault();
+            const input = document.querySelector('#msg');
+            const encrypted = btoa(input.value);
+            console.log(document.querySelector('#msg1').innerHTML = encrypted);
+        });
+    </script>
+</body>
+
+</html>
