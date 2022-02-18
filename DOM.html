@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+    <style>
+        .green {
+            background-color: green;
+        }
+
+        ol.yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1" class="green">
+        <p>Hello</p>
+    </div>
+    <div class="green"></div>
+    <ol class="yellow">
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ol>
+    <p><img alt="dom" src="./images/html.png"></p>
+    <p><input title="enter your name" type="text" id="txtname" onchange="myfun()"></p>
+    <!-- <script>
+       function myfun(){
+           alert("Do Not Edit");
+       }
+        console.dir(document);
+        console.log(document.URL);
+        console.dir(document.children[0]); // html
+        console.dir(document.children[0].children[0]); // head
+        console.dir(document.children[0].children[1]); // body
+        console.dir(document.children[0].children[1].childNodes); // see all the node
+    </script>-->
+    <!-- <script>
+        document.getElementById("div1").innerHTML = "Hello!"; // selecting element by id
+        var a = document.getElementById("txtname");
+        console.log(a.value);
+
+        //selecting using tag name
+        var list = document.getElementsByTagName("li");
+        for(var i=0;i<list.length;i++) // updating list
+        {
+            list[i].innerHTML = "item" + (i+1);
+        }
+        list[2].innerHTML = "updated text";
+        var imglist = document.getElementsByTagName('img'); // updating image
+        imglist[0].src = "./images/download.jpg";
+    </script> -->
+    <!-- <script>
+        var list = document.getElementsByClassName('green');
+        for(var i=0;i<list.length;i++){
+            list[i].innerHTML = "green color updated";
+        }
+        // query selction
+        console.dir(document.querySelector('li')); // selects one query
+        console.dir(document.querySelectorAll('li')); // selects all li query
+        console.dir(document.querySelector('ol>li')); // found first element
+        console.dir(document.querySelector('div')); // element
+        console.dir(document.querySelector('#div1')); // id
+        console.dir(document.querySelector('.green')); // class
+        console.dir(document.querySelectorAll('div')); // all div
+        document.getElementById('div1').style.color = 'purple'; // change style of element
+        console.dir(document.getElementsByClassName('green'));
+    </script> -->
+    <script>
+        // array access
+        const arr = [1, 2, 3, 4, 5];
+        console.log(arr);
+        const strArr = JSON.stringify(arr);
+        console.log(strArr);
+
+        const myObj = {
+            firstname: "myfirstname",
+            lastname: "mylastname"
+        };
+        const strjson = JSON.stringify(myObj);
+        console.log(strjson);
+
+        var list = {
+            "studentlist": [
+                { "name": "ajith", "age": "23" },
+                { "name": "jerry", "age": "23" },
+                { "name": "tom", "age": "23" },
+            ]
+        };
+        console.log(list);
+
+        // json parse
+        const arr1 = JSON.parse(strjson);
+        console.log(arr1);
+
+        // dynamic style
+
+        function myfun() {
+            document.getElementById("div1").innerText = document.getElementById("txtname").value;
+            document.getElementById("div1").style.color = 'purple';
+          //  document.getElementById("div1").style.backgroundColor = 'red';
+            var output = document.getElementById('div1');
+            output.style.backgroundColor = "red";
+            output.style.border = "3px solid orange";
+        }
+    </script>
+</body>
+
+</html>
