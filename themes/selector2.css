@@ -1,0 +1,21 @@
+section{
+    color: red;
+}
+
+section > p{
+    color: orange;
+}
+
+/* select immediate following sibiling of specified element */
+h1 + p{
+    background-color: aquamarine;
+}
+
+/* select all sibiling placed after specified element */
+h1 ~ p{
+    background-color: blue;
+}
+
+h1 > p{
+    background-color: aquamarine;
+}
