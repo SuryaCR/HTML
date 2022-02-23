@@ -1,0 +1,53 @@
+/* for class based style */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: olivedrab;
+    position: relative;
+    animation-name: anim2;  /* thus define below @keyffram anim*/
+    animation-duration: 1s;
+}
+
+/* Keyframes are important frames which contains information start/end of action 
+ A keyframe */
+
+ @keyframes anim{
+     0%{
+         left: 0;
+         top: 0;
+         background-color: aqua;
+     }
+     100%{
+         left: 500px;
+         top: 0;
+         background-color: green;
+     }
+ }
+
+ @keyframes anim2{
+    0%{
+        left: 0;
+        top: 0;
+        background-color: aqua;
+    }
+    25%{
+        left: 500px;
+        top: 0px;
+        background-color: orange;
+    }
+    50%{
+        left: 500px;
+        top: 500px;
+        background-color: orangered;
+    }
+    75%{
+        left: 0;
+        top: 500px;
+        background-color: red;
+    }
+    100%{
+        left:0;
+        top: 0;
+        background-color: green;
+    }
+}
